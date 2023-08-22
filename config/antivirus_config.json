@@ -1,0 +1,21 @@
+{
+	"Application":{
+		"Name": "PyOps",
+		"Modules":{
+		"Name" : "Antivirus",
+		"Actions" : [
+			{
+				"Name" : "Analyze",
+				"Description": "Antivirus",
+				"CurrentDirectory": "~/PyOps",
+				"Params" : {	
+					"UserInput" : "path",			
+					"ApiKey" : "./ressources/api_keys.json"
+					},
+				"Return" : "results",
+				"Shortcut": "1"
+			}		
+			]
+		}
+	}
+}

@@ -1,0 +1,29 @@
+Code de gestion des dépendances 
+
+
+Création de l'arborescence : done
+Création du config reader : en cours
+Gestion du déplacement dans l'arborescence
+
+
+#!/usr/bin/env bash
+FILE=/script/requirements.txt
+if test -f "$FILE"; then
+    python3 script/main.py
+    echo "Lancement du script"
+else
+    echo "Installation des dépendances en cours..."
+    pip install pipreqs
+    pipreqs script
+    pip install -r script/requirements.txt
+    python3 script/main.py
+fi
+
+
+
+
+Remarques : 
+Générale : Retravailler les fichiers JSON (rajout de "Description", et essentiellement le nom des fonctions ainsi que les arguments attendus)
+Antivirus : retravailler la classe en intégrant le .zip à la classe et en ajoutant un paramètre api_key que nous vous fournirons.
+AI : Ajout d'un paramètre api_key que nous vous fournirons.
+Github : Ajout d'un paramètre api_key que nous vous fournirons. (pour le token d'authentification OAUTH)

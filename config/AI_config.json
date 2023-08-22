@@ -1,0 +1,32 @@
+{
+	"Application":{
+		"Name": "PyOps",
+		"Modules":{
+			"Name" : "IA_tools",
+			"Actions" : [
+					{
+						"Name" : "chatGptAsk", 
+						"Description":"AI Tools",
+						"Params" : {
+							"Param1" : "Input", 
+							"Param2" : "User_choice",
+							"Param3" : "ConfigFile_path"
+							},							
+					
+						"Return" : "Réponse de chatgpt",
+						"Shortcut" : [
+							{"1":"Entrée libre"},
+							{"2":"Optimiser le code"},
+							{"3": "Corriger/Débuger le code"}, 
+							{"4" : "Commenter le code"},
+							{"5" : "Quitter se déconnecter"}
+						]
+				}
+			],
+		"Config" : {
+			"Path" : "/ressources/ia_config.json",
+			"Name" : "APIKEY"
+			}    
+		}
+	}
+}    

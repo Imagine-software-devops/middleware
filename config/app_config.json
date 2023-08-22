@@ -1,0 +1,77 @@
+{
+  "Application": {
+    "Name": "PyOps",
+    "Description": "Boite à outils DevOps",
+    "Version": "1.0.0",
+    "Author": "Imagine Software",
+    "Crédits": ["Chayma BOUCHFIRA", 
+                "Nicolas DUFOUR", 
+                "Xavier MARECHAL", 
+                "Lucas MASOERO", 
+                "Mohamed BENGUERRAICHE", 
+                "Hachem MOSBAH", 
+                "Nadir ABDELOUAHAB", 
+                "Sébastien SIDDI", 
+                "Sacia HOUIOUA", 
+                "Hugo CEREZO", 
+                "Vincent BOLLOT", 
+                "Myreille KUETE NZONTEU", 
+                "Devaki HUYNH",
+                "Olivier TENGHERIAN"],
+    "WebSite": "http://mbenguerraiche.fr/imagine_software",
+    "Modules": {
+      "Name": "Menu principal",
+      "Actions": [
+        {
+          "Name": "AI",
+          "Description": "AI",
+          "CurrentDirectory": "./",
+          "ConfigPath": "AI_config.json",
+          "Shortcut": "1"
+        },
+        {
+          "Name": "Antivirus",
+          "Description": "Antivirus",
+          "CurrentDirectory": "./",
+          "ConfigPath": "antivirus_config.json",
+          "Shortcut": "2"
+        },
+        {
+          "Name": "Explorer",
+          "Description": "Explorer",
+          "CurrentDirectory": "./",
+          "ConfigPath": "explorer_config.json",
+          "Shortcut": "3"
+        },
+        {
+          "Name": "GitHub",
+          "Description": "GitHub",
+          "CurrentDirectory": "./",
+          "ConfigPath": "github_config.json",
+          "Shortcut": "4"
+        },
+        {
+          "Name": "Templating",
+          "Description": "Templating",
+          "CurrentDirectory": "./",
+          "ConfigPath": "templating_config.json",
+          "Shortcut": "5"
+        },     
+        {
+          "Name": "Options",
+          "Description": "Options",
+          "DefaultPath": "./",
+          "TranslateConfigPath": "translate_config.json",
+          "ApiKeysConfigPath": "ressources/api_keys.json",
+          "Shortcut": "6"
+        },
+        {
+          "Name": "Quitter",
+          "Description": "Quitter",
+          "Return": "Quitter? Oui ou non",
+          "Shortcut": "7"
+        }
+      ]
+    }
+  }
+}

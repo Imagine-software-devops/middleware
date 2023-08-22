@@ -1,0 +1,15 @@
+{
+    "APIKeys":[
+        {
+        "Name":"VirusTotal",
+        "Key":""
+        },
+        {"Name":"ChatGPT",
+        "Key":""
+        },	
+        {
+        "Name":"Github",
+        "Key":""
+        }	
+    ]
+}
