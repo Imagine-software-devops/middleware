@@ -69,7 +69,7 @@
           "Name": "Quitter",
           "Description": "Quitter",
           "Return": "Quitter? Oui ou non",
-          "Shortcut": "7"
+          "Shortcut": "Q"
         }
       ]
     }

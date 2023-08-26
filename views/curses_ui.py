@@ -55,6 +55,7 @@ class CursesUI:
         sys.exit(0)
 
     def main_loop(self, config_path):
+        from config.quickactions_config import QuickActionsConfig
         while True:
             self.stdscr.clear()
             self.draw_header(config_path)
@@ -64,9 +65,9 @@ class CursesUI:
             self.draw_input()
             self.draw_quick_actions(config_path)
             self.stdscr.refresh()
-            key = self.stdscr.getch()
+            key = self.stdscr.getch()    
             if key == ord('q'):
-                break
-
+                break        
+            config_path = QuickActionsConfig.get_action(self, config_path, key)
     def close(self):
         curses.endwin()

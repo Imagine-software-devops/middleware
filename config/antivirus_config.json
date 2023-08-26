@@ -14,6 +14,11 @@
 					},
 				"Return" : "results",
 				"Shortcut": "1"
+			},
+			{
+				"Name" : "Retour au menu principal",
+				"Description": "Retour au menu principal",
+				"Shortcut": "0"
 			}		
 			]
 		}
