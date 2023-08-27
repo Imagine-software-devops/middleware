@@ -19,6 +19,12 @@
 				"Target" : "Retour au menu principal",
 				"Description": "Retour au menu principal",
 				"Shortcut": "0"
+			},
+			{
+				"Target": "Quitter",
+				"Description": "Quitter",
+				"Return": "Quitter? Oui ou non",
+				"Shortcut": "Q"
 			}		
 			]
 		}

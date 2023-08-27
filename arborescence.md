@@ -7,10 +7,9 @@
 |   |-- app_config.json
 |   |-- explorer_config.json
 |   |-- github_config.json
+|   |-- options_config.json
 |   |-- quickactions_config.py
 |   |-- templating_config.json
-|   |-- test_config.json
-|   |-- translate_config.json
 |-- controllers/
 |   |-- __init__.py
 |   |-- __main__.py

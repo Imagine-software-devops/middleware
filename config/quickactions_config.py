@@ -22,6 +22,7 @@ class QuickActionsConfig:
                     return config_path 
                 else:                              
                     pass
+            return config_path
         else:
             if key == ord('0'):
                 config_path = QuickActionsConfig.config_path_contructor("app_config.json")

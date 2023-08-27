@@ -53,7 +53,7 @@
           "Shortcut": "5"
         },     
         {
-          "Target": "Options",
+          "Target": "options_config.json",
           "Description": "Options",
           "DefaultPath": "./",
           "TranslateConfigPath": "translate_config.json",

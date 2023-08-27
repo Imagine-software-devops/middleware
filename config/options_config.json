@@ -2,11 +2,11 @@
 	"Application":{
 		"Name": "PyOps",
 		"Modules":{
-		"Name" : "GitHub",
+		"Name" : "Options",
 		"Actions" : [
 			{
-				"Target" : "commit",
-				"Description": "Faire un commit",
+				"Target" : "Langue de l'application",
+				"Description": "Langue de l'application",
 				"CurrentDirectory": "./",
 				"Params" : {	
 					"UserInput" : "path",			
