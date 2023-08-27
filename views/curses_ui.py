@@ -68,6 +68,6 @@ class CursesUI:
             key = self.stdscr.getch()    
             if key == ord('q'):
                 break        
-            config_path = QuickActionsConfig.get_action(self, config_path, key)
+            config_path = QuickActionsConfig.get_target(self, config_path, key)
     def close(self):
         curses.endwin()

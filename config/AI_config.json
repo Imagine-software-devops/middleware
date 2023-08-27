@@ -4,30 +4,72 @@
 		"Modules":{
 			"Name" : "IA_tools",
 			"Actions" : [
-					{
-						"Target" : "chatGptAsk", 
-						"Description":"AI Tools",
-						"CurrentDirectory": "./",
-						"Params" : {
-							"Param1" : "Input", 
-							"Param2" : "User_choice",
-							"Param3" : "ConfigFile_path"
-							},							
-					
-						"Return" : "Réponse de chatgpt",
-						"Shortcut" : [
-							{"1":"Entrée libre"},
-							{"2":"Optimiser le code"},
-							{"3": "Corriger/Débuger le code"}, 
-							{"4" : "Commenter le code"},
-							{"5" : "Quitter se déconnecter"}
-						]
+				{
+					"Target" : "chatGptAsk", 
+					"Description":"Entrée libre",
+					"CurrentDirectory": "./",
+					"Params" : {
+						"UserInput" : "Input", 
+						"UserChoice" : "User_choice",
+						"ApiKey" : "/ressources/ia_config.json"
+						},							
+				
+					"Return" : "Réponse de chatgpt",
+					"Shortcut" : "1"
+				},
+				{
+					"Target" : "chatGptAsk", 
+					"Description":"Optimiser le code",
+					"CurrentDirectory": "./",
+					"Params" : {
+						"UserInput" : "Input", 
+						"UserChoice" : "User_choice",
+						"ApiKey" : "/ressources/ia_config.json"
+						},							
+				
+					"Return" : "Réponse de chatgpt",
+					"Shortcut" : "2"
+				},
+				{
+					"Target" : "chatGptAsk", 
+					"Description":"Corriger/Débuger le code",
+					"CurrentDirectory": "./",
+					"Params" : {
+						"UserInput" : "Input", 
+						"UserChoice" : "User_choice",
+						"ApiKey" : "/ressources/ia_config.json"
+						},							
+				
+					"Return" : "Réponse de chatgpt",
+					"Shortcut" : "3"
+				},
+				{
+					"Target" : "chatGptAsk", 
+					"Description":"Commenter le code",
+					"CurrentDirectory": "./",
+					"Params" : {
+						"UserInput" : "Input", 
+						"UserChoice" : "User_choice",
+						"ApiKey" : "/ressources/ia_config.json"
+						},							
+				
+					"Return" : "Réponse de chatgpt",
+					"Shortcut" : "4"
+				},
+				{
+					"Target" : "chatGptAsk", 
+					"Description":"Quitter se déconnecter",
+					"CurrentDirectory": "./",
+					"Params" : {
+						"UserInput" : "Input", 
+						"UserChoice" : "User_choice",
+						"ApiKey" : "/ressources/ia_config.json"
+						},							
+				
+					"Return" : "Réponse de chatgpt",
+					"Shortcut" : "5"
 				}
-			],
-		"Config" : {
-			"Path" : "/ressources/ia_config.json",
-			"Name" : "APIKEY"
-			}    
+			]		  
 		}
 	}
 }    

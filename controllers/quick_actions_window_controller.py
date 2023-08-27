@@ -43,16 +43,23 @@ class QuickActionsWindowController:
 
     # Obtenir le texte des actions rapides
     def get_quick_actions_text(self):
-        actions = []
+        actions = []        
+        for action in self.config["Application"]["Modules"]["Actions"]:
+            @QuickActionsWindowController.QuickActions.register(action["Shortcut"], action["Target"],action["Description"])
+            def action_function(action=action, actions=actions):
+                actions.append(f"{action['Shortcut']}: {action['Description']}")
+            action_function()           
+        quick_actions_text = "Actions rapides :\n\n" + ", ".join(actions)
+        return quick_actions_text
+    
+    def get_targets(self):
         targets = []
         for action in self.config["Application"]["Modules"]["Actions"]:
             @QuickActionsWindowController.QuickActions.register(action["Shortcut"], action["Target"], action["Description"])
-            def action_function(action=action, actions=actions):
-                actions.append(f"{action['Shortcut']}: {action['Description']}")
-            action_function()
-            targets.append(action["Target"])
-        quick_actions_text = "Actions rapides :\n\n" + ", ".join(actions)
-        return quick_actions_text, targets
+            def add_target(action=action, targets=targets):
+                targets.append({"shortcut": action["Shortcut"], "target": action["Target"]})
+            add_target()
+        return targets
 
 
 

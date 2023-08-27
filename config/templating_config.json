@@ -6,7 +6,7 @@
 		"Actions" : [
 			{
 				"Target" : "NodeJS",
-				"Description": "Créer une apllication NodeJS",
+				"Description": "Créer une aplication NodeJS",
 				"CurrentDirectory": "./",
 				"Params" : {	
 					"UserInput" : "path",			
