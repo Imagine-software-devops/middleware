@@ -13,6 +13,15 @@ class DirectoryTreeWindow:
 
         # Afficher le texte de la variable 'text' dans la fenêtre de sortie
         directory_tree = DTWC.get_directory_tree(config_path, 0)
-        self.window.addstr(1, 1, directory_tree, curses.color_pair(1))
+        
+        # Calculer la position pour afficher le texte légèrement à droite
+        y = 2
+        x = 4  # Décalage à droite
+        
+        # Afficher le texte dans la fenêtre avec le décalage calculé
+        lines = directory_tree.split('\n')
+        for i, line in enumerate(lines):
+            self.window.addstr(y + i, x, line, curses.color_pair(1))
+
         # Dessiner l'arborescence des dossiers ici
         self.window.refresh()
