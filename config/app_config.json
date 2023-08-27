@@ -23,42 +23,37 @@
       "Name": "Menu principal",
       "Actions": [
         {
-          "Name": "AI",
+          "Target": "AI_config.json",
           "Description": "AI",
           "CurrentDirectory": "./",
-          "ConfigPath": "AI_config.json",
           "Shortcut": "1"
         },
         {
-          "Name": "Antivirus",
+          "Target": "antivirus_config.json",
           "Description": "Antivirus",
           "CurrentDirectory": "./",
-          "ConfigPath": "antivirus_config.json",
           "Shortcut": "2"
         },
         {
-          "Name": "Explorer",
+          "Target": "explorer_config.json",
           "Description": "Explorer",
           "CurrentDirectory": "./",
-          "ConfigPath": "explorer_config.json",
           "Shortcut": "3"
         },
         {
-          "Name": "GitHub",
+          "Target": "github_config.json",
           "Description": "GitHub",
           "CurrentDirectory": "./",
-          "ConfigPath": "github_config.json",
           "Shortcut": "4"
         },
         {
-          "Name": "Templating",
+          "Target": "templating_config.json",
           "Description": "Templating",
           "CurrentDirectory": "./",
-          "ConfigPath": "templating_config.json",
           "Shortcut": "5"
         },     
         {
-          "Name": "Options",
+          "Target": "Options",
           "Description": "Options",
           "DefaultPath": "./",
           "TranslateConfigPath": "translate_config.json",
@@ -66,7 +61,7 @@
           "Shortcut": "6"
         },
         {
-          "Name": "Quitter",
+          "Target": "Quitter",
           "Description": "Quitter",
           "Return": "Quitter? Oui ou non",
           "Shortcut": "Q"

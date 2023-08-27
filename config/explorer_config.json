@@ -1,0 +1,26 @@
+{
+	"Application":{
+		"Name": "PyOps",
+		"Modules":{
+		"Name" : "Explorer",
+		"Actions" : [
+			{
+				"Target" : "create_directory",
+				"Description": "Créer de dossier",
+				"CurrentDirectory": "./",
+				"Params" : {	
+					"UserInput" : "path",			
+					"ApiKey" : "./ressources/api_keys.json"
+					},
+				"Return" : "results",
+				"Shortcut": "1"
+			},
+			{
+				"Target" : "Retour au menu principal",
+				"Description": "Retour au menu principal",
+				"Shortcut": "0"
+			}		
+			]
+		}
+	}
+}

@@ -22,9 +22,21 @@
 |   |-- quick_actions_window_controller.py
 |-- modules/
 |   |-- __init__.py
+|   |-- AI/
+|   |   |-- __init__.py
+|   |-- antivirus/
+|   |   |-- __init__.py
+|   |-- explorer/
+|   |   |-- __init__.py
+|   |-- github/
+|   |   |-- __init__.py
 |   |-- logging/
 |   |   |-- __init__.py
 |   |   |-- log.py
+|   |-- templating/
+|   |   |-- __init__.py
+|   |-- translate/
+|   |   |-- __init__.py
 |-- ressources/
 |   |-- __init__.py
 |   |-- api_keys.json

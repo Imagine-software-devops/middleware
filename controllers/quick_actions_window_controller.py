@@ -7,10 +7,12 @@ class MethodRegistry:
 
     # Méthode statique pour enregistrer les actions rapides
     @classmethod
-    def register(cls, shortcut: str, function: str) -> Callable:
+    def register(cls, shortcut: str, target: str, description: str) -> Callable:
         def decorator(quick_action: Callable) -> Callable:
-            cls.jump_table[shortcut] = quick_action
-            quick_action.function_name = function
+            cls.jump_table[shortcut] = quick_action            
+            quick_action.shortcut = shortcut
+            quick_action.target = target
+            quick_action.description = description
             return quick_action
         return decorator
 
@@ -42,12 +44,15 @@ class QuickActionsWindowController:
     # Obtenir le texte des actions rapides
     def get_quick_actions_text(self):
         actions = []
+        targets = []
         for action in self.config["Application"]["Modules"]["Actions"]:
-            @QuickActionsWindowController.QuickActions.register(action["Shortcut"], action["Name"])
+            @QuickActionsWindowController.QuickActions.register(action["Shortcut"], action["Target"], action["Description"])
             def action_function(action=action, actions=actions):
-                actions.append(f"{action['Shortcut']}: {action['Name']}")
+                actions.append(f"{action['Shortcut']}: {action['Description']}")
             action_function()
+            targets.append(action["Target"])
         quick_actions_text = "Actions rapides :\n\n" + ", ".join(actions)
-        return quick_actions_text
+        return quick_actions_text, targets
+
 
 

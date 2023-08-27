@@ -5,9 +5,9 @@
 		"Name" : "Antivirus",
 		"Actions" : [
 			{
-				"Name" : "Analyze",
-				"Description": "Antivirus",
-				"CurrentDirectory": "~/PyOps",
+				"Target" : "Analyze",
+				"Description": "Analyser un fichier",
+				"CurrentDirectory": "./",
 				"Params" : {	
 					"UserInput" : "path",			
 					"ApiKey" : "./ressources/api_keys.json"
@@ -16,7 +16,7 @@
 				"Shortcut": "1"
 			},
 			{
-				"Name" : "Retour au menu principal",
+				"Target" : "Retour au menu principal",
 				"Description": "Retour au menu principal",
 				"Shortcut": "0"
 			}		

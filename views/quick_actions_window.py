@@ -16,7 +16,7 @@ class QuickActionsWindow:
         controller = QAWC(config_path)
 
         # Obtenir le texte des actions rapides
-        menu_text = controller.get_quick_actions_text()
+        menu_text, targets = controller.get_quick_actions_text()
 
         # Afficher le texte de la variable 'text' dans la fenêtre de sortie
         self.window.addstr(1, 1, menu_text, curses.color_pair(1))

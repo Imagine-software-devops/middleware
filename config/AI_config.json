@@ -5,8 +5,9 @@
 			"Name" : "IA_tools",
 			"Actions" : [
 					{
-						"Name" : "chatGptAsk", 
+						"Target" : "chatGptAsk", 
 						"Description":"AI Tools",
+						"CurrentDirectory": "./",
 						"Params" : {
 							"Param1" : "Input", 
 							"Param2" : "User_choice",
