@@ -17,6 +17,7 @@
 |   |-- header_window_controller.py
 |   |-- input_box_window_controller.py
 |   |-- menu_window_controller.py
+|   |-- options_window_controller.py
 |   |-- output_window_controller.py
 |   |-- quick_actions_window_controller.py
 |-- modules/
@@ -49,6 +50,7 @@
 |   |-- header_window.py
 |   |-- input_box_window.py
 |   |-- menu_window.py
+|   |-- options_window.py
 |   |-- output_window.py
 |   |-- quick_actions_window.py
 |-- arborescence.md
