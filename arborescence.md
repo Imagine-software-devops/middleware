@@ -20,6 +20,7 @@
 |   |-- options_window_controller.py
 |   |-- output_window_controller.py
 |   |-- quick_actions_window_controller.py
+|-- library/
 |-- modules/
 |   |-- __init__.py
 |   |-- AI/
@@ -45,6 +46,7 @@
 |-- views/
 |   |-- __init__.py
 |   |-- __main__.py
+|   |-- credits_window.py
 |   |-- curses_ui.py
 |   |-- directory_tree_window.py
 |   |-- header_window.py
