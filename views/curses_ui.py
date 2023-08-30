@@ -2,7 +2,7 @@
 import curses
 import signal
 import sys
-from .__main__ import HeaderWindow, MenuWindow, DirectoryTreeWindow, OutputWindow, InputBoxWindow, QuickActionsWindow
+from .__main__ import HeaderWindow, MenuWindow, DirectoryTreeWindow, QuickActionsWindow, OptionsWindow
 
 
 class CursesUI:
@@ -32,19 +32,15 @@ class CursesUI:
 
     def draw_directory_tree(self, config_path):
         directory_tree = DirectoryTreeWindow(self.stdscr.subwin(self.height * 4 // 5, self.width * 2 // 3, self.height // 10, self.width // 3 + 1))
-        directory_tree.draw(config_path)
-
-    def draw_output(self):
-        output = OutputWindow(self.stdscr.subwin(self.height * 5 // 100, self.width * 2 // 3, self.height * 75 // 100 + 1, self.width // 3 + 1))
-        output.draw()
-
-    def draw_input(self):
-        input_box = InputBoxWindow(self.stdscr.subwin(self.height * 5 // 100, self.width * 2 // 3, self.height * 80 // 100 + 1, self.width // 3 + 1))
-        input_box.draw()
+        directory_tree.draw(config_path)  
 
     def draw_quick_actions(self, config_path):
         quick_actions = QuickActionsWindow(self.stdscr.subwin(self.height // 10, self.width, self.height * 90 // 100, 0))
         quick_actions.draw(config_path)
+
+    def draw_options(self):
+        options_window = OptionsWindow(self.stdscr)
+        options_window.draw()
 
     def init_signal_handler(self):
         signal.signal(signal.SIGINT, self.handle_signal)
@@ -60,14 +56,14 @@ class CursesUI:
             self.stdscr.clear()
             self.draw_header(config_path)
             self.draw_menu(config_path)
-            self.draw_directory_tree(config_path)
-            self.draw_output()
-            self.draw_input()
+            self.draw_directory_tree(config_path)          
             self.draw_quick_actions(config_path)
             self.stdscr.refresh()
             key = self.stdscr.getch()    
             if key == ord('q'):
-                break        
+                break    
+            if key == ord('o') or key == ord('O'):
+                self.draw_options()   
             config_path = QuickActionsConfig.get_target(self, config_path, key)
     def close(self):
         curses.endwin()
