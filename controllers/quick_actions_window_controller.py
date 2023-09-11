@@ -60,6 +60,8 @@ class QuickActionsWindowController:
                 targets.append({"shortcut": action["Shortcut"], "target": action["Target"]})
             add_target()
         return targets
+    
+    
 
 
 

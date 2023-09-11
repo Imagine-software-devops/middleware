@@ -2,7 +2,7 @@
 import curses
 import signal
 import sys
-from .__main__ import HeaderWindow, MenuWindow, DirectoryTreeWindow, QuickActionsWindow, OptionsWindow
+from .__main__ import HeaderWindow, MenuWindow, DirectoryTreeWindow, QuickActionsWindow, OptionsWindow, InputBoxWindow
 
 
 class CursesUI:
@@ -50,20 +50,33 @@ class CursesUI:
         self.close()
         sys.exit(0)
 
+    def draw_input_box(self, config_path, key):
+        input_box = InputBoxWindow(self.stdscr)
+        input_box.draw(config_path, key)        
+
     def main_loop(self, config_path):
         from config.quickactions_config import QuickActionsConfig
         while True:
+            
             self.stdscr.clear()
             self.draw_header(config_path)
             self.draw_menu(config_path)
             self.draw_directory_tree(config_path)          
-            self.draw_quick_actions(config_path)
-            self.stdscr.refresh()
-            key = self.stdscr.getch()    
+            self.draw_quick_actions(config_path)                                   
+            self.stdscr.refresh()  
+
+            # print(config_path)          
+
+            key = self.stdscr.getch()  
+            
             if key == ord('q'):
                 break    
             if key == ord('o') or key == ord('O'):
                 self.draw_options()   
+            # if key in [ord('1'), ord('2'), ord('3'), ord('4'), ord('5')]: 
+            #     self.draw_input_box(config_path, key)    
+
             config_path = QuickActionsConfig.get_target(self, config_path, key)
+
     def close(self):
         curses.endwin()
